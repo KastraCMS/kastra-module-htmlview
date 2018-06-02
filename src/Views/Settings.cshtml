@@ -1,0 +1,27 @@
+@model Kastra.Module.HtmlView.Models.SettingsModel
+@using Kastra.Core.TagHelpers;
+
+<script src="~/js/plugins/ckeditor/ckeditor.js"></script>
+<script src="~/js/plugins/ckeditor/adapters/jquery.js"></script>
+
+<div>
+    <h2>Edit HTML content</h2>
+
+    <form method="post">
+        <div class="field">
+            <label for="html-content"></label>
+            <textarea class="html-content" name="Content">@Model.Content</textarea>
+        </div>
+        
+        <ul class="actions">
+            <li><button class="button special" type="submit">Valid</button></li>
+            <li><a class="button" asp-controller="AdminPage" asp-action="Edit" asp-route-id="@Model.PageId">Cancel</a></li>
+        </ul>
+    </form>
+</div>
+
+<script type="text/javascript">
+    (function($) {
+        $('.html-content').ckeditor();
+    })(jQuery);
+</script>

@@ -1,0 +1,16 @@
+{
+	"Modules": [{
+		"Definition": {
+			"SystemName": "Html",
+			"DisplayName": "Html",
+			"Namespace": "Kastra.Module.HtmlView",
+			"Path": "Default/HtmlView",
+			"Version": "0.8"
+		},
+		"Controls": [{
+				"KeyName": "Settings",
+				"Path": "Settings"
+			}
+		]
+	}]
+}
