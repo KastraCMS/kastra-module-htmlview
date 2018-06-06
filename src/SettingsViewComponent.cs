@@ -1,12 +1,11 @@
 using System;
 using Kastra.Core.Attributes;
+using Kastra.Core.Dto;
 using Kastra.Core.ViewComponents;
 using Kastra.Module.HtmlView.Business.Contracts;
 using Kastra.Module.HtmlView.DAL;
 using Kastra.Module.HtmlView.DTO;
 using Kastra.Module.HtmlView.Models;
-using Kastra.Web.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 

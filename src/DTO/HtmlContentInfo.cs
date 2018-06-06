@@ -1,5 +1,5 @@
 ﻿using System;
-using Kastra.Core;
+using Kastra.Core.Dto;
 
 namespace Kastra.Module.HtmlView.DTO
 {

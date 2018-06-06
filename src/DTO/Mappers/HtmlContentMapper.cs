@@ -1,5 +1,4 @@
-﻿using Kastra.Business.Mappers;
-using Kastra.Module.HtmlView.DAL;
+﻿using Kastra.Module.HtmlView.DAL;
 
 namespace Kastra.Module.HtmlView.DTO.Mappers
 {

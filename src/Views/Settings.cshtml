@@ -1,5 +1,4 @@
 @model Kastra.Module.HtmlView.Models.SettingsModel
-@using Kastra.Core.TagHelpers;
 
 <script src="~/js/plugins/ckeditor/ckeditor.js"></script>
 <script src="~/js/plugins/ckeditor/adapters/jquery.js"></script>
@@ -15,7 +14,6 @@
         
         <ul class="actions">
             <li><button class="button special" type="submit">Valid</button></li>
-            <li><a class="button" asp-controller="AdminPage" asp-action="Edit" asp-route-id="@Model.PageId">Cancel</a></li>
         </ul>
     </form>
 </div>

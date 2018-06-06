@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Kastra.Module.HtmlView.DAL;
 using System;
+using Kastra.Core.Business;
 
 namespace Kastra.Module.HtmlView
 {
