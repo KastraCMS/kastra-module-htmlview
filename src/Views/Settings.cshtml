@@ -3,18 +3,15 @@
 <script src="~/js/plugins/ckeditor/ckeditor.js"></script>
 <script src="~/js/plugins/ckeditor/adapters/jquery.js"></script>
 
-<div>
-    <h2>Edit HTML content</h2>
-
+<div class="text-white m-sm-5 p-5 bg-dark clearfix">
+    <h4 class="text-center">Edit HTML content</h4>
+    <hr/>
+    <h2 class="mb-5 text-center">HTML View module</h2>                
     <form method="post">
-        <div class="field">
-            <label for="html-content"></label>
-            <textarea class="html-content" name="Content">@Model.Content</textarea>
+        <div class="form-group row">
+            <textarea class="html-content form-control" name="Content">@Model.Content</textarea>
         </div>
-        
-        <ul class="actions">
-            <li><button class="button special" type="submit">Valid</button></li>
-        </ul>
+        <button class="btn btn-outline-info mt-5 float-right" type="submit">Valid</button>
     </form>
 </div>
 
