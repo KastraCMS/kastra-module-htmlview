@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Kastra.Core.ViewComponents;
 using Kastra.Module.HtmlView.Business.Contracts;
 using Kastra.Module.HtmlView.DAL;
@@ -17,12 +18,12 @@ namespace Kastra.Module.HtmlView
             _htmlBusiness = htmlBusiness;
         }
         
-        public override ViewViewComponentResult OnViewComponentLoad()
+        public override Task<ViewViewComponentResult> OnViewComponentLoad()
         {
             HtmlModel model = new HtmlModel(this);
             model.Content = _htmlBusiness.GetHtmlContent(Module.ModuleId)?.Content;
 
-            return ModuleView("Index", model);
+            return Task.FromResult(ModuleView("Index", model));
         }
     }
 }

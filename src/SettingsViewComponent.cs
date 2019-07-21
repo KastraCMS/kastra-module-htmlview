@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Kastra.Core.Attributes;
 using Kastra.Core.Dto;
 using Kastra.Core.ViewComponents;
@@ -25,7 +26,7 @@ namespace Kastra.Module.HtmlView
             _userManager = userManager;
         }
         
-        public override ViewViewComponentResult OnViewComponentLoad()
+        public override Task<ViewViewComponentResult> OnViewComponentLoad()
         {
             SettingsModel model = new SettingsModel(this);
             model.PageId = Page.PageId;
@@ -34,7 +35,7 @@ namespace Kastra.Module.HtmlView
 
             if(model.ValidForm)
             {
-                String userId = _userManager.GetUserId(HttpContext.User);
+                string userId = _userManager.GetUserId(HttpContext.User);
 
                 if (htmlContent == null)
                 {
@@ -51,9 +52,11 @@ namespace Kastra.Module.HtmlView
                 _htmlBusiness.SaveHtmlContent(htmlContent);
             }
             else
+            {
                 model.Content = htmlContent?.Content;
+            }
 
-            return ModuleView("Settings", model);
+            return Task.FromResult(ModuleView("Settings", model));
         }
     }
 }
