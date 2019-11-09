@@ -2,13 +2,13 @@ using System;
 using System.Threading.Tasks;
 using Kastra.Core.Attributes;
 using Kastra.Core.Dto;
-using Kastra.Core.ViewComponents;
+using Kastra.Core.Modules;
+using Kastra.Core.Modules.ViewComponents;
 using Kastra.Module.HtmlView.Business.Contracts;
 using Kastra.Module.HtmlView.DAL;
 using Kastra.Module.HtmlView.DTO;
 using Kastra.Module.HtmlView.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.ViewComponents;
 
 namespace Kastra.Module.HtmlView
 {
@@ -26,14 +26,14 @@ namespace Kastra.Module.HtmlView
             _userManager = userManager;
         }
         
-        public override Task<ViewViewComponentResult> OnViewComponentLoad()
+        public override Task<ModuleViewComponentResult> OnViewComponentLoad()
         {
             SettingsModel model = new SettingsModel(this);
             model.PageId = Page.PageId;
 
             HtmlContentInfo htmlContent = _htmlBusiness.GetHtmlContent(Module.ModuleId);
 
-            if(model.ValidForm)
+            if (Request.Method == "POST")
             {
                 string userId = _userManager.GetUserId(HttpContext.User);
 

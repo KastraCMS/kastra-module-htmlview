@@ -1,12 +1,12 @@
-﻿using Kastra.Core;
-using Kastra.Module.HtmlView.Business;
-using Kastra.Module.HtmlView.Business.Contracts;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using Kastra.Module.HtmlView.DAL;
-using System;
 using Kastra.Core.Business;
+using Kastra.Core.Modules;
+using Kastra.Module.HtmlView.Business;
+using Kastra.Module.HtmlView.Business.Contracts;
+using Kastra.Module.HtmlView.DAL;
 
 namespace Kastra.Module.HtmlView
 {

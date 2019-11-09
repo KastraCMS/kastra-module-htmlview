@@ -1,5 +1,6 @@
 using System;
-using Kastra.Core.ViewComponents;
+using Kastra.Core.Modules;
+using Kastra.Core.Modules.ViewComponents;
 
 namespace Kastra.Module.HtmlView.Models
 {

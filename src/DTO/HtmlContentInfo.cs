@@ -10,8 +10,8 @@ namespace Kastra.Module.HtmlView.DTO
 		public string Content { get; set; }
 		public DateTime CreatedAt { get; set; }
 		public DateTime UpdatedAt { get; set; }
-		public String CreatedBy { get; set; }
-		public String UpdatedBy { get; set; }
+		public string CreatedBy { get; set; }
+		public string UpdatedBy { get; set; }
 
 		public virtual ModuleInfo Module { get; set; }
     }
