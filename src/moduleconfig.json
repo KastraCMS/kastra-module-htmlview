@@ -5,7 +5,7 @@
 			"DisplayName": "Html",
 			"Namespace": "Kastra.Module.HtmlView",
 			"Path": "Default/HtmlView",
-			"Version": "0.9.31"
+			"Version": "0.9.32"
 		},
 		"Controls": [{
 				"KeyName": "Settings",
